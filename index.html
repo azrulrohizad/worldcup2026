@@ -9,81 +9,207 @@
 body{font-family:Arial,sans-serif;background:#0a0e1a;color:#e8eaf0;padding:1rem}
 h1{text-align:center;font-size:1.4rem;color:#fff;padding:1rem 0 .3rem}
 p.sub{text-align:center;color:#90caf9;font-size:.85rem;margin-bottom:1.2rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
 .card{background:#131929;border:1px solid #1e2d4a;border-radius:10px;overflow:hidden}
-.card-header{background:linear-gradient(90deg,#1565c0,#0277bd);padding:.5rem .8rem;font-weight:700;font-size:.9rem;color:#fff}
-.team{display:flex;align-items:center;gap:.6rem;padding:.5rem .8rem;border-bottom:1px solid #1a2540;font-size:.88rem}
-.team:last-child{border-bottom:none}
-.badge{font-size:.65rem;padding:.1rem .4rem;border-radius:3px;font-weight:700;margin-left:auto;white-space:nowrap}
-.w{background:#1b5e20;color:#a5d6a7}
-.t{background:#1a237e;color:#90caf9}
+.date{background:#0d1627;padding:.35rem .8rem;font-size:.72rem;color:#546e7a;text-transform:uppercase;letter-spacing:.5px}
+.matchup{display:flex;align-items:center;padding:.6rem .8rem;gap:.5rem}
+.team-name{flex:1;font-size:.88rem}
+.team-name.right{text-align:right}
+.score{background:#1565c0;color:#fff;font-weight:700;font-size:1rem;padding:.25rem .7rem;border-radius:5px;min-width:52px;text-align:center}
+.score.tbd{background:#263238;color:#546e7a}
+.score.live{background:#b71c1c;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.winner{font-size:.65rem;padding:.1rem .5rem;border-radius:3px;font-weight:700;margin-left:auto}
+.adv{background:#1b5e20;color:#a5d6a7}
+.elim{background:#37474f;color:#90a4ae}
+.result-row{display:flex;align-items:center;justify-content:center;padding:.2rem .8rem .6rem;font-size:.78rem;color:#66bb6a;gap:.3rem}
 footer{text-align:center;color:#546e7a;font-size:.75rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #1e2d4a}
 </style>
 </head>
 <body>
 <h1>🏆 FIFA World Cup 2026</h1>
-<p class="sub">32 Qualified Teams for Knockout Stage · June 28 – July 3</p>
+<p class="sub">Round of 32 Results · Updated Jun 29, 2026</p>
 <div class="grid">
 
-<div class="card"><div class="card-header">Group A</div>
-<div class="team">🇲🇽 Mexico <span class="badge w">1st · 9pts</span></div>
-<div class="team">🇿🇦 South Africa <span class="badge w">2nd · 3pts</span></div></div>
+<!-- Jun 28 -->
+<div class="card">
+<div class="date">☑ Jun 28 · Los Angeles</div>
+<div class="matchup">
+  <span class="team-name">🇨🇦 Canada</span>
+  <span class="score">1 – 0</span>
+  <span class="team-name right">South Africa 🇿🇦</span>
+</div>
+<div class="result-row">✅ Canada advance to Round of 16</div>
+</div>
 
-<div class="card"><div class="card-header">Group B</div>
-<div class="team">🇨🇭 Switzerland <span class="badge w">1st · 7pts</span></div>
-<div class="team">🇨🇦 Canada <span class="badge w">2nd · 4pts</span></div></div>
+<!-- Jun 29 Match 1 -->
+<div class="card">
+<div class="date">☑ Jun 29 · Houston</div>
+<div class="matchup">
+  <span class="team-name">🇧🇷 Brazil</span>
+  <span class="score">2 – 1</span>
+  <span class="team-name right">Japan 🇯🇵</span>
+</div>
+<div class="result-row">✅ Brazil advance to Round of 16</div>
+</div>
 
-<div class="card"><div class="card-header">Group C</div>
-<div class="team">🇧🇷 Brazil <span class="badge w">1st · 7pts</span></div>
-<div class="team">🇲🇦 Morocco <span class="badge w">2nd · 7pts</span></div></div>
+<!-- Jun 29 Match 2 - LIVE -->
+<div class="card">
+<div class="date">🔴 Jun 29 · Boston (In Progress)</div>
+<div class="matchup">
+  <span class="team-name">🇩🇪 Germany</span>
+  <span class="score live">1 – 1</span>
+  <span class="team-name right">Paraguay 🇵🇾</span>
+</div>
+<div class="result-row" style="color:#ef5350">🔴 Match in progress · Enciso 42'</div>
+</div>
 
-<div class="card"><div class="card-header">Group D</div>
-<div class="team">🇺🇸 USA <span class="badge w">1st · 6pts</span></div>
-<div class="team">🇦🇺 Australia <span class="badge w">2nd · 4pts</span></div></div>
+<!-- Jun 29 Match 3 - Upcoming -->
+<div class="card">
+<div class="date">⏳ Jun 29 · Monterrey · 9pm ET</div>
+<div class="matchup">
+  <span class="team-name">🇳🇱 Netherlands</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Morocco 🇲🇦</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">Group E</div>
-<div class="team">🇩🇪 Germany <span class="badge w">1st · 6pts</span></div>
-<div class="team">🇨🇮 Ivory Coast <span class="badge w">2nd · 6pts</span></div></div>
+<!-- Jun 30 -->
+<div class="card">
+<div class="date">⏳ Jun 30 · Mexico City</div>
+<div class="matchup">
+  <span class="team-name">🇲🇽 Mexico</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Ecuador 🇪🇨</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">Group F</div>
-<div class="team">🇳🇱 Netherlands <span class="badge w">1st · 7pts</span></div>
-<div class="team">🇯🇵 Japan <span class="badge w">2nd · 4pts</span></div></div>
+<div class="card">
+<div class="date">⏳ Jun 30 · Dallas</div>
+<div class="matchup">
+  <span class="team-name">🇫🇷 France</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Sweden 🇸🇪</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">Group G</div>
-<div class="team">🇪🇬 Egypt <span class="badge w">1st · 7pts</span></div>
-<div class="team">🇧🇪 Belgium <span class="badge w">2nd · 4pts</span></div></div>
+<div class="card">
+<div class="date">⏳ Jun 30 · Vancouver</div>
+<div class="matchup">
+  <span class="team-name">🇨🇮 Ivory Coast</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Bosnia-Herz. 🇧🇦</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">Group H</div>
-<div class="team">🇪🇸 Spain <span class="badge w">1st · 7pts</span></div>
-<div class="team">🇨🇻 Cape Verde <span class="badge w">2nd · 4pts</span></div></div>
+<!-- Jul 1 -->
+<div class="card">
+<div class="date">⏳ Jul 1 · Seattle</div>
+<div class="matchup">
+  <span class="team-name">🇪🇬 Egypt</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">South Korea 🇰🇷</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">Group I</div>
-<div class="team">🇫🇷 France <span class="badge w">1st · 9pts</span></div>
-<div class="team">🇳🇴 Norway <span class="badge w">2nd · 3pts</span></div></div>
+<div class="card">
+<div class="date">⏳ Jul 1 · San Francisco</div>
+<div class="matchup">
+  <span class="team-name">🇺🇸 USA</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Bosnia-Herz. 🇧🇦</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">Group J</div>
-<div class="team">🇦🇷 Argentina 🏆 <span class="badge w">1st · 9pts</span></div>
-<div class="team">🇦🇹 Austria <span class="badge w">2nd · 3pts</span></div></div>
+<div class="card">
+<div class="date">⏳ Jul 1 · Philadelphia</div>
+<div class="matchup">
+  <span class="team-name">🇦🇷 Argentina 🏆</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Cape Verde 🇨🇻</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">Group K</div>
-<div class="team">🇨🇴 Colombia <span class="badge w">1st · 9pts</span></div>
-<div class="team">🇵🇹 Portugal <span class="badge w">2nd · 4pts</span></div></div>
+<!-- Jul 2 -->
+<div class="card">
+<div class="date">⏳ Jul 2 · Toronto</div>
+<div class="matchup">
+  <span class="team-name">🇨🇭 Switzerland</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Algeria 🇩🇿</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">Group L</div>
-<div class="team">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England <span class="badge w">1st · 7pts</span></div>
-<div class="team">🇭🇷 Croatia <span class="badge w">2nd · 3pts</span></div></div>
+<div class="card">
+<div class="date">⏳ Jul 2 · Atlanta</div>
+<div class="matchup">
+  <span class="team-name">🇪🇸 Spain</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Senegal 🇸🇳</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
-<div class="card"><div class="card-header">🌟 Best 3rd Place (8 teams)</div>
-<div class="team">🇪🇨 Ecuador <span class="badge t">3rd E · 4pts</span></div>
-<div class="team">🇸🇪 Sweden <span class="badge t">3rd F · 4pts</span></div>
-<div class="team">🇧🇦 Bosnia-Herz. <span class="badge t">3rd B · 4pts</span></div>
-<div class="team">🇵🇾 Paraguay <span class="badge t">3rd D · 4pts</span></div>
-<div class="team">🇸🇳 Senegal <span class="badge t">3rd I · 3pts</span></div>
-<div class="team">🇰🇷 South Korea <span class="badge t">3rd A · 3pts</span></div>
-<div class="team">🇩🇿 Algeria <span class="badge t">3rd J · 3pts</span></div>
-<div class="team">🇬🇭 Ghana <span class="badge t">3rd L · 3pts</span></div></div>
+<div class="card">
+<div class="date">⏳ Jul 2 · Miami</div>
+<div class="matchup">
+  <span class="team-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Paraguay 🇵🇾</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
+
+<!-- Jul 3 -->
+<div class="card">
+<div class="date">⏳ Jul 3 · Los Angeles</div>
+<div class="matchup">
+  <span class="team-name">🇨🇴 Colombia</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Australia 🇦🇺</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
+
+<div class="card">
+<div class="date">⏳ Jul 3 · New York/NJ</div>
+<div class="matchup">
+  <span class="team-name">🇧🇪 Belgium</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Norway 🇳🇴</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
+
+<div class="card">
+<div class="date">⏳ Jul 3 · Guadalajara</div>
+<div class="matchup">
+  <span class="team-name">🇵🇹 Portugal</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Austria 🇦🇹</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
+
+<div class="card">
+<div class="date">⏳ Jul 3 · Kansas City</div>
+<div class="matchup">
+  <span class="team-name">🇭🇷 Croatia</span>
+  <span class="score tbd">vs</span>
+  <span class="team-name right">Sweden 🇸🇪</span>
+</div>
+<div class="result-row" style="color:#546e7a">⏳ Yet to kick off</div>
+</div>
 
 </div>
-<footer>⚽ FIFA World Cup 2026 · USA · Mexico · Canada · Updated Jun 28, 2026</footer>
+<footer>⚽ FIFA World Cup 2026 · USA · Mexico · Canada · Updated Jun 29, 2026</footer>
 </body>
 </html>
